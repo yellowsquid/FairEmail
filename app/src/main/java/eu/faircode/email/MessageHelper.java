@@ -2445,8 +2445,9 @@ public class MessageHelper {
             header = header.substring(0, semi);
 
         if (header.contains("using TLS") ||
-                header.contains("via HTTP") ||
-                header.contains("version=TLS")) {
+                header.contains("via HTTPS") ||
+                header.contains("version=TLS") ||
+                header.contains("version=Tls")) {
             Log.i("--- found TLS");
             return true;
         }
